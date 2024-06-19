@@ -1,1 +1,1 @@
-## A simple highligh clips creator
+## A simple highligth clips creator
