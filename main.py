@@ -36,9 +36,10 @@ def start_end_times(final_data):
 
 
 def main():
-    input_video = "joe_rogan_short.mp4"
+    input_video = "./videos/general/joe_rogan_short.mp4"
     # first we extract audio from the video
     audio_name = extract_audio(input_video)
+    print(f"audioooooooooooooooo name {audio_name}")
     # then we transcribe the audio
     srt_name = transcribe(audio_path=audio_name)
     # now we have srt file
@@ -52,7 +53,7 @@ def main():
     for index,time in enumerate(time_list):
         start_time = return_seconds(time[0])
         end_time = return_seconds(time[1])
-        chop_background(start_time, end_time, index)
+        chop_background(start_time, end_time, input_video, index)
         print(f"Chopped {index}th part")
     print("All done!")
     

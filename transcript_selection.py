@@ -19,10 +19,12 @@ def extract_audio(input_video:str)->str:
 
     input_video_name = input_video.replace(".mp4", "")
 
-    extracted_audio = f"audio-{input_video_name}.wav"
+    extracted_audio = f"audio-output.wav"
+
     stream = ffmpeg.input(input_video)
     stream = ffmpeg.output(stream, extracted_audio)
     ffmpeg.run(stream, overwrite_output=True)
+
     return extracted_audio
 
 
