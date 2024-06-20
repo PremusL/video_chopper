@@ -1,2 +1,8 @@
 __pycache__/
 videos/
+audio-output.wav
+audio.srt
+fixed_subtitles.srt
+output.txt
+transcript.txt
+fixed_subtitles.csv
